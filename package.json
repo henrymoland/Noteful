@@ -5,13 +5,16 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon sever"
+    "server": "nodemon sever",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Henry Moland",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.2.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",
     "jsonwebtoken": "^8.5.1",

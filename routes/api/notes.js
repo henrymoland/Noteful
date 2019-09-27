@@ -38,7 +38,7 @@ async (req, res) => {
 
 // @route   GET api/notes
 // @desc    Get list of notes
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
     
     try {
         const notes = await Note.find().sort({ date: -1 });
